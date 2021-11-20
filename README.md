@@ -20,11 +20,11 @@ using the Cordova / Phonegap command line interface.
 
 ## Using the plugin
 
-The plugin creates the object `window.imagePicker` with the method `getPictures(success, fail, options)`
+The plugin creates the object `window.imagePicker2` with the method `getPictures(success, fail, options)`
 
 Example - Get Full Size Images (all default options):
 ```javascript
-window.imagePicker.getPictures(
+window.imagePicker2.getPictures(
     function(results) {
         for (var i = 0; i < results.length; i++) {
             console.log('Image URI: ' + results[i]);
@@ -37,7 +37,7 @@ window.imagePicker.getPictures(
 
 Example - Get at most 10 images scaled to width of 800:
 ```javascript
-window.imagePicker.getPictures(
+window.imagePicker2.getPictures(
     function(results) {
         for (var i = 0; i < results.length; i++) {
             console.log('Image URI: ' + results[i]);
@@ -71,8 +71,8 @@ window.imagePicker.getPictures(
 
         // output type, defaults to FILE_URIs.
         // available options are 
-        // window.imagePicker.OutputType.FILE_URI (0) or 
-        // window.imagePicker.OutputType.BASE64_STRING (1)
+        // window.imagePicker2.OutputType.FILE_URI (0) or 
+        // window.imagePicker2.OutputType.BASE64_STRING (1)
         outputType: int
     };
     
@@ -93,7 +93,7 @@ Note that the `hasReadPermission` function will return true when:
 
 ```js
   function hasReadPermission() {
-    window.imagePicker.hasReadPermission(
+    window.imagePicker2.hasReadPermission(
       function(result) {
         // if this is 'false' you probably want to call 'requestReadPermission' now
         alert(result);
@@ -103,7 +103,7 @@ Note that the `hasReadPermission` function will return true when:
 
   function requestReadPermission() {
     // no callbacks required as this opens a popup which returns async
-    window.imagePicker.requestReadPermission();
+    window.imagePicker2.requestReadPermission();
   }
 ```
 

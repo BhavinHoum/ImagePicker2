@@ -18,7 +18,7 @@ ImagePicker.prototype.validateOutputType = function(options){
 	var outputType = options.outputType;
 	if(outputType){
 		if(outputType !== this.OutputType.FILE_URI && outputType !== this.OutputType.BASE64_STRING){
-			console.log('Invalid output type option entered. Defaulting to FILE_URI. Please use window.imagePicker.OutputType.FILE_URI or window.imagePicker.OutputType.BASE64_STRING');
+			console.log('Invalid output type option entered. Defaulting to FILE_URI. Please use window.imagePicker2.OutputType.FILE_URI or window.imagePicker2.OutputType.BASE64_STRING');
 			options.outputType = this.OutputType.FILE_URI;
 		}
 	}
@@ -68,4 +68,4 @@ ImagePicker.prototype.getPictures = function(success, fail, options) {
 	return cordova.exec(success, fail, "ImagePicker", "getPictures", [params]);
 };
 
-window.imagePicker = new ImagePicker();
+window.imagePicker22 = new ImagePicker();
