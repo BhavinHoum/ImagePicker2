@@ -68,4 +68,4 @@ ImagePicker.prototype.getPictures = function(success, fail, options) {
 	return cordova.exec(success, fail, "ImagePicker", "getPictures", [params]);
 };
 
-window.imagePicker22 = new ImagePicker();
+window.imagePicker2 = new ImagePicker();
